@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import { Link } from "react-router-dom";
 import './App.css';
 
 function App() {
@@ -9,14 +10,16 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <h1>Bookkeeper</h1>
+        <nav
+          style={{
+            borderBottom: "solid 1px",
+            paddingBottom: "1rem",
+          }}
         >
-          Learn React
-        </a>
+          <Link to="/invoices">Invoices</Link> |{" "}
+          <Link to="/expenses">Expenses</Link>
+        </nav>
       </header>
     </div>
   );
